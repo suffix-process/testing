@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
-import { FiCheckCircle, FiSettings, FiShield, FiCpu, FiDatabase, FiClipboard, FiActivity, FiRepeat } from "react-icons/fi";
-import GradientCard from "./GradientCard";
-import { title } from "framer-motion/client";
-// import styled from "styled-components";
+import {
+  FiCheckCircle,
+  FiSettings,
+  FiShield,
+  FiCpu,
+  FiDatabase,
+  FiClipboard,
+  FiActivity,
+  FiRepeat,
+} from "react-icons/fi";
 
 const Services = () => {
   const services = [
@@ -46,48 +52,8 @@ const Services = () => {
       icon: <FiClipboard size={32} className="text-cyan-500" />,
       title: "MISP Checks",
       description:
-        "Digitize MISP forms and check compliance with client’s pre-defined rules and IRDA guidelines.",
+        "Digitize MISP forms and check compliance with client's pre-defined rules and IRDA guidelines.",
     },
-    // {
-    //   // icon: <FiFileText size={32} className="text-cyan-500" />,
-    //   title: "Document Retrieval & Summary",
-    //   description:
-    //     "Retrieve and summarize key documents like ITR, financials, GST, Form 16, PAN, and Aadhaar for easy access.",
-    // },
-    // {
-    //   // icon: <FiLock size={32} className="text-cyan-500" />,
-    //   title: "Aadhaar Masking BOT",
-    //   description:
-    //     "Automation BOT extracts and masks Aadhaar numbers to ensure privacy protection.",
-    // },
-    // {
-    //   // icon: <FiRepeat size={32} className="text-cyan-500" />,
-    //   title: "GST Reconciliation BOT",
-    //   description:
-    //     "Automate GST verification against client databases to ensure match and compliance.",
-    // },
-    // {
-    //   // icon: <FiType size={32} className="text-cyan-500" />,
-    //   title: "Transliterator BOT",
-    //   description:
-    //     "Perform transliteration of KYC documents for nationwide checks and verify authenticity against portals.",
-    // },
-    // {
-    //   // icon: <FiAward size={32} className="text-cyan-500" />,
-    //   title: "IRDA Licensing Check BOT",
-    //   description:
-    //     "Validate insurance agents' licenses against PAN numbers based on client-defined criteria.",
-    // },
-    // {
-    //   // icon: <FiCommand size={32} className="text-cyan-500" />,
-    //   title: "Excel Automation BOT",
-    //   description:
-    //     "Automate repetitive Excel tasks at client sites to save time and reduce human errors.",
-    // // },
-    // {
-    //   title : "Intelligent Automation Platform",
-    //   description : "Six bots in one cloud platform—OCR, Aadhaar masking, GST reconciliation, transliteration, IRDA license checks, and Excel automation— all run under a single orchestrator and tracked in one dashboard.",
-    // },
     {
       icon: <FiActivity size={32} className="text-cyan-500" />,
       title: "Health Policy Data Management",
@@ -97,7 +63,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#fff8ee]">
+    <section className="py-20 bg-[#E4EFE7]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -116,57 +82,70 @@ const Services = () => {
           </p>
         </motion.div>
 
-        {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 group">
-          {services.map((service, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map(({ icon, title, description }, index) => (
             <motion.div
               key={index}
-              className="
-            opacity-100
-            group-hover:opacity-0
-            transition-opacity duration-300
-          "
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ opacity: 1, scale: 1.1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <GlassCard className="h-full hover:border-cyan-300">
-                <div className="p-6 h-full flex flex-col">
-                  <div className="mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 flex-grow">
-                    {service.description}
-                  </p>
-                </div>
-              </GlassCard>
-            </motion.div>
-          ))}
-        </div> */}
-        {/* ///////////////////////////////////// */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <GradientCard
-              key={index}
-              className="h-full"
+              className="flip-card h-full min-h-[250px]"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="inner p-6 flex flex-col h-full">
-                <div className="mb-4 display: flex">{service.icon} &nbsp; <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3></div>
-                
-                <p className="text-gray-600 flex-grow">{service.description}</p>
+              <div className="flip-card-inner w-full h-full relative">
+                <div className="flip-card-front absolute w-full h-full">
+                  <div className="h-full border rounded-lg p-6 flex items-center justify-center bg-[#fff]">
+                    <div className="text-center">
+                      <div className="flex justify-center mb-4">{icon}</div>
+                      <h3 className="text-xl font-semibold text-gray-800">
+                        {title}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-card-back absolute w-full h-full">
+                  <div className="h-full border border-black rounded-lg p-6 flex flex-col bg-[#fff]">
+                    <p className="text-gray-600 flex-grow">{description}</p>
+                  </div>
+                </div>
               </div>
-            </GradientCard>
+            </motion.div>
           ))}
         </div>
-        {/* ///////////////////////////////////////////// */}
       </div>
+
+      <style jsx global>{`
+        .flip-card {
+          perspective: 1000px;
+          background-color: transparent;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </section>
   );
 };

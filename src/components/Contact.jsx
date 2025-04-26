@@ -17,7 +17,7 @@ import { MoveRight } from "lucide-react";
 import GlassCard from "./GlassCard";
 import { useState } from "react";
 import { toast, Toaster } from 'react-hot-toast';
-import formImage from '../assets/new logo.png'; // Make sure to add your image file
+import formImage from '../assets/new logo.png';
 
 // Animation variants
 const containerVariants = {
@@ -85,32 +85,39 @@ const Contact = () => {
     setIsSubmitting(true);
   
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "aeb17194-61cc-4047-ab0a-406904e4fc16",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_email: "sending.mail@gmail.com",
+          to_email: "get.mail@gmail.com"
+        })
       });
-  
-      // First check if response is OK
-      if (!response.ok) {
-        const text = await response.text();
-        try {
-          // Try to parse as JSON
-          const data = JSON.parse(text);
-          throw new Error(data.error || 'Request failed');
-        } catch {
-          // If not JSON, use the raw text
-          throw new Error(text || 'Request failed');
-        }
+
+      const result = await response.json();
+      
+      if (result.success) {
+        toast.success('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.message || 'Failed to send message');
       }
-  
-      const data = await response.json();
-      toast.success('Message sent successfully!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-  
     } catch (error) {
       console.error('Submission error:', error);
-      toast.error(error.message || 'Failed to send');
+      toast.error(error.message || 'Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -181,6 +188,10 @@ const Contact = () => {
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
+                    <input type="hidden" name="access_key" value="aeb17194-61cc-4047-ab0a-406904e4fc16" />
+                    <input type="hidden" name="from_email" value="sending.mail@gmail.com" />
+                    <input type="hidden" name="to_email" value="get.mail@gmail.com" />
+
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-blue-400">
                         <FiUser />
