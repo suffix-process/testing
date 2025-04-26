@@ -33,7 +33,8 @@ const About = () => {
     // <section className="py-16 bg-[#7f9996] text-white">
     // <section className="py-16 bg-[#9ba3a2] text-black">
 
-    <section className="py-16 bg-[#FAF1E6] text-black">
+    // <section className="py-16 bg-[#FAF1E6] text-black">
+    <section className="py-16 bg-[#E4EFE7] text-black">
       <div className="container mx-auto px-6">
         {/* About Us Section */}
         <motion.div
@@ -58,7 +59,7 @@ const About = () => {
                 whileHover="hover"
                 className="bg-[#FFFDFC] p-6 rounded-xl border  cursor-pointer"
               >
-                <Building className="w-10 h-10 mx-auto mb-4 text-cyan-400" />
+                <Building className="w-10 h-10 mx-auto mb-4 text-[#016B81]" />
                 <h3 className="text-xl font-semibold mb-2">Established</h3>
                 <p className="opacity-80">
                   Founded in 2020, private limited since 2022
@@ -71,7 +72,7 @@ const About = () => {
                 whileHover="hover"
                 className="bg-[#FFFDFC] p-6 rounded-xl border  cursor-pointer"
               >
-                <Award className="w-10 h-10 mx-auto mb-4 text-purple-400" />
+                <Award className="w-10 h-10 mx-auto mb-4 text-[#016B81]" />
                 <h3 className="text-xl font-semibold mb-2">Certification</h3>
                 <p className="opacity-80">ISO 27001:2022 Certified</p>
               </motion.div>
@@ -82,7 +83,7 @@ const About = () => {
                 whileHover="hover"
                 className="bg-[#FFFDFC] p-6 rounded-xl border  cursor-pointer"
               >
-                <Clock className="w-10 h-10 mx-auto mb-4 text-green-400" />
+                <Clock className="w-10 h-10 mx-auto mb-4 text-[#016B81]" />
                 <h3 className="text-xl font-semibold mb-2">Experience</h3>
                 <p className="opacity-80">Combined 30+ years in BFSI sector</p>
               </motion.div>
@@ -93,7 +94,7 @@ const About = () => {
                 whileHover="hover"
                 className="bg-[#FFFDFC] p-6 rounded-xl border  cursor-pointer"
               >
-                <Users className="w-10 h-10 mx-auto mb-4 text-blue-400" />
+                <Users className="w-10 h-10 mx-auto mb-4 text-[#016B81]" />
                 <h3 className="text-xl font-semibold mb-2">Team Strength</h3>
                 <p className="opacity-80">
                   35 professionals across two branches
