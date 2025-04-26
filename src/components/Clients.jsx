@@ -97,6 +97,43 @@ const Clients = () => {
                   </motion.div>
                 </div>
               ))}
+
+              {duplicatedClients.map((client, index) => (
+                <div 
+                  key={`second-${client.id}-${index}`} 
+                  className="flex-shrink-0 mx-2 md:mx-4 p-2 md:p-4 bg-white rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="w-24 h-12 md:w-40 md:h-20 flex items-center justify-center"
+                  >
+                    <img
+                      src={client.logo}
+                      alt={client.alt}
+                      className="object-contain max-h-full max-w-full"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+
+              {duplicatedClients.map((client, index) => (
+                <div 
+                  key={`second-${client.id}-${index}`} 
+                  className="flex-shrink-0 mx-2 md:mx-4 p-2 md:p-4 bg-white rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="w-24 h-12 md:w-40 md:h-20 flex items-center justify-center"
+                  >
+                    <img
+                      src={client.logo}
+                      alt={client.alt}
+                      className="object-contain max-h-full max-w-full"
+                    />
+                  </motion.div>
+                </div>
+              ))}
+              
             </motion.div>
           </div>
         </div>
