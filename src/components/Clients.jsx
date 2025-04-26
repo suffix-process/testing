@@ -51,7 +51,7 @@ const Clients = () => {
             <motion.div
               className="flex"
               animate={{
-                x: ['0%', '-100%'],
+                x: ['0%', '-50%'],
               }}
               transition={{
                 duration: 50,
@@ -59,16 +59,15 @@ const Clients = () => {
                 ease: 'linear',
               }}
             >
-              
               {/* First Set */}
               {duplicatedClients.map((client, index) => (
                 <div 
                   key={`first-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-2 md:mx-4 p-2 md:p-4 bg-white rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-24 h-12 md:w-40 md:h-20 flex items-center justify-center"
+                    className="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center"
                   >
                     <img
                       src={client.logo}
@@ -83,11 +82,11 @@ const Clients = () => {
               {duplicatedClients.map((client, index) => (
                 <div 
                   key={`second-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-2 md:mx-4 p-2 md:p-4 bg-white rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-24 h-12 md:w-40 md:h-20 flex items-center justify-center"
+                    className="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center"
                   >
                     <img
                       src={client.logo}
@@ -98,14 +97,14 @@ const Clients = () => {
                 </div>
               ))}
 
-              {duplicatedClients.map((client, index) => (
+{duplicatedClients.map((client, index) => (
                 <div 
                   key={`second-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-2 md:mx-4 p-2 md:p-4 bg-white rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-24 h-12 md:w-40 md:h-20 flex items-center justify-center"
+                    className="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center"
                   >
                     <img
                       src={client.logo}
@@ -116,14 +115,14 @@ const Clients = () => {
                 </div>
               ))}
 
-              {duplicatedClients.map((client, index) => (
+{duplicatedClients.map((client, index) => (
                 <div 
                   key={`second-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-2 md:mx-4 p-2 md:p-4 bg-white rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-24 h-12 md:w-40 md:h-20 flex items-center justify-center"
+                    className="w-32 h-18 md:w-40 md:h-20 flex items-center justify-center"
                   >
                     <img
                       src={client.logo}
@@ -133,7 +132,6 @@ const Clients = () => {
                   </motion.div>
                 </div>
               ))}
-              
             </motion.div>
           </div>
         </div>
