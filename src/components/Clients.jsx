@@ -1,143 +1,147 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-// Import your client logos
-import bajajLogo from '../assets/bajaj.png';
-import iciciLogo from '../assets/icici.png';
-import relianceLogo from '../assets/Reliance.png';
-import tataAigLogo from '../assets/TATA_AIG.png';
-import indusLogo from '../assets/indus.png';
-import shriram from '../assets/shriram.png';
+import { motion } from "framer-motion";
+import { FiCheckCircle, FiSettings, FiShield, FiCpu, FiDatabase, FiClipboard, FiActivity, FiRepeat } from "react-icons/fi";
+import GradientCard from "./GradientCard";
+import { title } from "framer-motion/client";
+// import styled from "styled-components";
 
-const Clients = () => {
-  // Array of client logos
-  const clients = [
-    { id: 1, logo: bajajLogo, alt: 'Bajaj Allianz General Insurance' },
-    { id: 2, logo: iciciLogo, alt: 'ICICI Lombard General Insurance' },
-    { id: 3, logo: relianceLogo, alt: 'Reliance General Insurance' },
-    { id: 4, logo: tataAigLogo, alt: 'TATA AIG Insurance' },
-    { id: 5, logo: indusLogo, alt: 'IndusInd Bank' },
-    { id: 6, logo: shriram, alt: 'Shriram Capital Finance' },
+const Services = () => {
+  const services = [
+    {
+      icon: <FiSettings size={32} className="text-cyan-500" />,
+      title: "Process Centralization",
+      description:
+        "Reorganize scattered workflows into a unified, well-managed operation—on your premises or ours.",
+    },
+    {
+      icon: <FiCheckCircle size={32} className="text-cyan-500" />,
+      title: "Verification & QC Solutions",
+      description:
+        "Ensure data accuracy and compliance with our specialized verification and quality check services.",
+    },
+    {
+      icon: <FiCpu size={32} className="text-cyan-500" />,
+      title: "Unified Intelligent Automation Platform",
+      description:
+        "Streamline operations with our cloud-native RPA and AI platform, integrating six specialized bots into a single, orchestrated, and dashboard-driven solution for faster, error-free processing.",
+    },
+    {
+      icon: <FiShield size={32} className="text-cyan-500" />,
+      title: "BFSI Compliance",
+      description:
+        "Solutions designed specifically to meet the stringent compliance requirements of the BFSI sector.",
+    },
+    {
+      icon: <FiRepeat size={32} className="text-cyan-500" />,
+      title: "Centralized KYC Checks",
+      description:
+        "Perform nationwide KYC checks from Ahmedabad office. Verify insurer documents against databases/online portals for authenticity and compliance.",
+    },
+    {
+      icon: <FiDatabase size={32} className="text-cyan-500" />,
+      title: "Crop Insurance Quality Checks",
+      description:
+        "Compare state land record data with client databases. Conduct quality checks using Pradhan Mantri FasalBimaYojna data.",
+    },
+    {
+      icon: <FiClipboard size={32} className="text-cyan-500" />,
+      title: "MISP Checks",
+      description:
+        "Digitize MISP forms and check compliance with client’s pre-defined rules and IRDA guidelines.",
+    },
+    // {
+    //   // icon: <FiFileText size={32} className="text-cyan-500" />,
+    //   title: "Document Retrieval & Summary",
+    //   description:
+    //     "Retrieve and summarize key documents like ITR, financials, GST, Form 16, PAN, and Aadhaar for easy access.",
+    // },
+    // {
+    //   // icon: <FiLock size={32} className="text-cyan-500" />,
+    //   title: "Aadhaar Masking BOT",
+    //   description:
+    //     "Automation BOT extracts and masks Aadhaar numbers to ensure privacy protection.",
+    // },
+    // {
+    //   // icon: <FiRepeat size={32} className="text-cyan-500" />,
+    //   title: "GST Reconciliation BOT",
+    //   description:
+    //     "Automate GST verification against client databases to ensure match and compliance.",
+    // },
+    // {
+    //   // icon: <FiType size={32} className="text-cyan-500" />,
+    //   title: "Transliterator BOT",
+    //   description:
+    //     "Perform transliteration of KYC documents for nationwide checks and verify authenticity against portals.",
+    // },
+    // {
+    //   // icon: <FiAward size={32} className="text-cyan-500" />,
+    //   title: "IRDA Licensing Check BOT",
+    //   description:
+    //     "Validate insurance agents' licenses against PAN numbers based on client-defined criteria.",
+    // },
+    // {
+    //   // icon: <FiCommand size={32} className="text-cyan-500" />,
+    //   title: "Excel Automation BOT",
+    //   description:
+    //     "Automate repetitive Excel tasks at client sites to save time and reduce human errors.",
+    // // },
+    // {
+    //   title : "Intelligent Automation Platform",
+    //   description : "Six bots in one cloud platform—OCR, Aadhaar masking, GST reconciliation, transliteration, IRDA license checks, and Excel automation— all run under a single orchestrator and tracked in one dashboard.",
+    // },
+    {
+      icon: <FiActivity size={32} className="text-cyan-500" />,
+      title: "Health Policy Data Management",
+      description:
+        "Capture correct data and manage all addendums in the company core systems for health policy records.",
+    },
   ];
 
-  // Duplicate clients enough times to ensure smooth looping
-  const duplicatedClients = [...clients, ...clients, ...clients];
-
   return (
-    <section className="py-12 md:py-16 bg-[#E4EFE7]">
+    <section className="py-20 bg-[#fff8ee]">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-8 md:mb-12"
+          className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2 md:mb-4">
-            Trusted By Insurance Leaders
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            Our Services
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            We're proud to partner with India's top insurance providers
+          <p className="text-gray-600 text-lg">
+            Tailored BFSI process solutions—manual execution, robotic process
+            automation (RPA), and hybrid models—designed to streamline
+            operations and ensure compliance.
           </p>
         </motion.div>
 
-        {/* Marquee Container */}
-        <div className="relative overflow-hidden py-4 md:py-6">
-          {/* Gradient fade effects */}
-          <div className="absolute inset-y-0 left-0 w-16 md:w-24 bg-gradient-to-r from-[#E4EFE7] to-transparent z-10"></div>
-          <div className="absolute inset-y-0 right-0 w-16 md:w-24 bg-gradient-to-l from-[#E4EFE7] to-transparent z-10"></div>
-          
-          {/* Infinite Marquee - Main Technique */}
-          <div className="flex">
-            <motion.div
-              className="flex"
-              animate={{
-                x: ['0%', '-50%'],
-              }}
-              transition={{
-                duration: 50,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
+        
+        {/* ///////////////////////////////////// */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => (
+            <GradientCard
+              key={index}
+              className="h-full"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
-              {/* First Set */}
-              {duplicatedClients.map((client, index) => (
-                <div 
-                  key={`first-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.alt}
-                      className="object-contain max-h-full max-w-full"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-              
-              {/* Second Set (duplicate for seamless loop) */}
-              {duplicatedClients.map((client, index) => (
-                <div 
-                  key={`second-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.alt}
-                      className="object-contain max-h-full max-w-full"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-
-{duplicatedClients.map((client, index) => (
-                <div 
-                  key={`second-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="w-32 h-16 md:w-40 md:h-20 flex items-center justify-center"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.alt}
-                      className="object-contain max-h-full max-w-full"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-
-{duplicatedClients.map((client, index) => (
-                <div 
-                  key={`second-${client.id}-${index}`} 
-                  className="flex-shrink-0 mx-3 md:mx-4 p-3 md:p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="w-32 h-18 md:w-40 md:h-20 flex items-center justify-center"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.alt}
-                      className="object-contain max-h-full max-w-full"
-                    />
-                  </motion.div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
+              <div className="inner p-6 flex flex-col h-full">
+                <div className="mb-4 display: flex">{service.icon} &nbsp; <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3></div>
+                
+                <p className="text-gray-600 flex-grow">{service.description}</p>
+              </div>
+            </GradientCard>
+          ))}
+        </div> 
+        {/* ///////////////////////////////////////////// */}
       </div>
     </section>
   );
 };
 
-export default Clients;
+export default Services;
+
