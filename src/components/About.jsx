@@ -138,7 +138,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12">
           {/* Vision Card */}
 
-          <div class="transition-transform mx-2 duration-200 hover:scale-105">
+          <div className="transition-transform mx-2 duration-200 hover:scale-105">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ const About = () => {
 
 
           {/* Mission Card */}
-          <div class="transition-transform duration-200 hover:scale-105">
+          <div className="transition-transform duration-200 hover:scale-105">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

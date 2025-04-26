@@ -8,16 +8,16 @@ import team4 from '../assets/team4.jpg';
 const teamMembers = [
 
   {
-    name: "Bhaumik Mehta",
-    role:" CEO & Co-Founder",
-    description: "Bhaumik Mehta, with 20 years of experience in fraud prevention, including 15 years at HDFC Bank, specializes in risk analysis, compliance, and fraud detection. His expertise ensures Suffix Process Solutions delivers secure and efficient services.",
-    image: team1
-  },
-  {
     name: "Sejal Mehta",
     role: "Director",
     description: "Sejal Mehta, a seasoned professional with over 12 years of experience in Insurance and Portfolio Management Services, excels in people management, policy structuring, and business development.",
     image: team2
+  },
+  {
+    name: "Bhaumik Mehta",
+    role:" CEO & Co-Founder",
+    description: "Bhaumik Mehta, with 20 years of experience in fraud prevention, including 15 years at HDFC Bank, specializes in risk analysis, compliance, and fraud detection. His expertise ensures Suffix Process Solutions delivers secure and efficient services.",
+    image: team1
   },
   {
     name: "Member 3",
