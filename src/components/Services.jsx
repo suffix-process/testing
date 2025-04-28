@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import GradientCard from "./GradientCard";
 import {
   FiCheckCircle,
   FiSettings,
@@ -84,6 +85,7 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map(({ icon, title, description }, index) => (
+
             <motion.div
               key={index}
               className="flip-card h-full min-h-[250px]"
@@ -93,24 +95,28 @@ const Services = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
+
+
               <div className="flip-card-inner w-full h-full relative">
-                <div className="flip-card-front absolute w-full h-full">
-                  <div className="h-full border rounded-lg p-6 flex items-center justify-center bg-[#fff]">
-                    <div className="text-center">
-                      <div className="flex justify-center mb-4">{icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-800">
-                        {title}
-                      </h3>
+                  <div className="flip-card-front absolute w-full h-full">
+                    <div className="h-full border border-black rounded-lg p-6 flex items-center justify-center bg-[#F5F5DC]">
+                      <div className="text-center">
+                        <div className="flex justify-center mb-4">{icon}</div>
+                        <h3 className="text-xl font-semibold text-gray-800">
+                          {title}
+                        </h3>
+                      </div>
                     </div>
                   </div>
-                </div>
                 <div className="flip-card-back absolute w-full h-full">
-                  <div className="h-full border border-black rounded-lg p-6 flex flex-col bg-[#fff]">
-                    <p className="text-gray-600 flex-grow">{description}</p>
+                  <div className="h-full border border-black rounded-lg p-6 flex flex-col bg-[#FFF]">
+                    <p className="text-gray-900 flex-grow">{description}</p>
                   </div>
                 </div>
               </div>
+
             </motion.div>
+
           ))}
         </div>
       </div>
