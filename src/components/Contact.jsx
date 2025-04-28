@@ -97,8 +97,8 @@ const Contact = () => {
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          from_email: "sending.mail@gmail.com",
-          to_email: "get.mail@gmail.com"
+          // from_email: "meet.darji@suffixcorp.com",
+          // to_email: "kmv75807@gmail.com"
         })
       });
 
