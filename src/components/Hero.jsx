@@ -4,7 +4,8 @@ import GlassCard from "./GlassCard";
 import { TypeAnimation } from "react-type-animation";
 import heroImage from "../assets/hero-image.jpg";
 import heroImage2 from "../assets/hero-image2.jpg";
-import "../styles/button.css"; // Import your button styles
+import "../styles/button.css";
+// Import your button styles
 // import { Home01Icon } from "hugeicons-react";
 
 
@@ -27,7 +28,7 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6"
             >
-              <span className="text-[#016B81]">Process Solutions</span>{" "}
+              <span className="text-[#016B81]"> Process Solutions</span>{" "}
               <TypeAnimation
                 sequence={[
                   "for BFSI Sector",

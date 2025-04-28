@@ -332,14 +332,14 @@ const Contact = () => {
                     </h4>
                     <div className="space-y-2">
                       <a
-                        href="tel:+919376884752"
+                        href="tel:+91 9376884752"
                         className="text-cyan-600 hover:text-cyan-800 transition-colors flex items-center gap-1"
                       >
                         +91 93768 84752
                         <FiArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
                       </a>
                       <a
-                        href="tel:+919525000237"
+                        href="tel:+91 9525000237"
                         className="text-cyan-600 hover:text-cyan-800 transition-colors flex items-center gap-1"
                       >
                         +91 95250 00237
@@ -420,9 +420,11 @@ const Contact = () => {
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-gray font-medium shadow-lg">
-            <FaHeadset className="mr-3 animate-pulse " color="black"  />
-            Need immediate assistance? Call our support line: +91 94272 37678
+         <FaHeadset className="mr-3 animate-pulse " color="black"  />
+            Need immediate assistance?
+            Call our support line: +91 94272 37678
           </div>
+          
         </motion.div>
       </div>
     </section>

@@ -51,15 +51,34 @@ const Footer = () => {
               Addressing the unique process requirements of the BFSI sector with innovative solutions.
             </p>
             <div className="flex space-x-4">
-              {[FiLinkedin, FiTwitter, FiFacebook, FiInstagram].map((Icon, i) => (
+              {/* {[FiLinkedin, FiTwitter, FiFacebook, FiInstagram].map((Icon, i) => (
+                
+              ))} */}
+
+              <a
+                  href="https://www.linkedin.com/company/suffix-outsourcing-solutions-pvt-ltd/"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+                  <FiLinkedin size={20} />
+                </a>
                 <a
-                  key={i}
                   href="#"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  <Icon size={20} />
+                  <FiTwitter size={20} />
                 </a>
-              ))}
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+                  <FiFacebook size={20} />
+                </a>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
+                >
+                  <FiInstagram size={20} />
+                </a>
             </div>
           </div>
 
